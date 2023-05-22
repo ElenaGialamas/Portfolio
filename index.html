@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/assets/index-72aec60a.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/three-c70de46c.js">
+    <link rel="modulepreload" crossorigin href="/assets/events-5f626723.js">
+    <link rel="modulepreload" crossorigin href="/assets/gsap-4393688f.js">
+    <link rel="stylesheet" href="/assets/index-1020d84c.css">
+  </head>
+  <body class="light-theme">
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <div class="page">
+      <div class="progress-wrapper">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="toggle-bar">
+        <div class="sun-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              fill="currentColor"
+              d="M12 5Q11.575 5 11.288 4.712Q11 4.425 11 4V2Q11 1.575 11.288 1.287Q11.575 1 12 1Q12.425 1 12.713 1.287Q13 1.575 13 2V4Q13 4.425 12.713 4.712Q12.425 5 12 5ZM16.95 7.05Q16.675 6.775 16.675 6.362Q16.675 5.95 16.95 5.65L18.35 4.225Q18.65 3.925 19.062 3.925Q19.475 3.925 19.775 4.225Q20.05 4.5 20.05 4.925Q20.05 5.35 19.775 5.625L18.35 7.05Q18.075 7.325 17.65 7.325Q17.225 7.325 16.95 7.05ZM20 13Q19.575 13 19.288 12.712Q19 12.425 19 12Q19 11.575 19.288 11.287Q19.575 11 20 11H22Q22.425 11 22.712 11.287Q23 11.575 23 12Q23 12.425 22.712 12.712Q22.425 13 22 13ZM12 23Q11.575 23 11.288 22.712Q11 22.425 11 22V20Q11 19.575 11.288 19.288Q11.575 19 12 19Q12.425 19 12.713 19.288Q13 19.575 13 20V22Q13 22.425 12.713 22.712Q12.425 23 12 23ZM5.65 7.05 4.225 5.65Q3.925 5.35 3.925 4.925Q3.925 4.5 4.225 4.225Q4.5 3.95 4.925 3.95Q5.35 3.95 5.625 4.225L7.05 5.65Q7.325 5.925 7.325 6.35Q7.325 6.775 7.05 7.05Q6.75 7.325 6.35 7.325Q5.95 7.325 5.65 7.05ZM18.35 19.775 16.95 18.35Q16.675 18.05 16.675 17.638Q16.675 17.225 16.95 16.95Q17.225 16.675 17.638 16.675Q18.05 16.675 18.35 16.95L19.775 18.35Q20.075 18.625 20.062 19.05Q20.05 19.475 19.775 19.775Q19.475 20.075 19.05 20.075Q18.625 20.075 18.35 19.775ZM2 13Q1.575 13 1.288 12.712Q1 12.425 1 12Q1 11.575 1.288 11.287Q1.575 11 2 11H4Q4.425 11 4.713 11.287Q5 11.575 5 12Q5 12.425 4.713 12.712Q4.425 13 4 13ZM4.225 19.775Q3.95 19.5 3.95 19.075Q3.95 18.65 4.225 18.375L5.65 16.95Q5.925 16.675 6.338 16.675Q6.75 16.675 7.05 16.95Q7.35 17.25 7.35 17.663Q7.35 18.075 7.05 18.375L5.65 19.775Q5.35 20.075 4.925 20.075Q4.5 20.075 4.225 19.775ZM12 18Q9.5 18 7.75 16.25Q6 14.5 6 12Q6 9.5 7.75 7.75Q9.5 6 12 6Q14.5 6 16.25 7.75Q18 9.5 18 12Q18 14.5 16.25 16.25Q14.5 18 12 18ZM12 16Q13.65 16 14.825 14.825Q16 13.65 16 12Q16 10.35 14.825 9.175Q13.65 8 12 8Q10.35 8 9.175 9.175Q8 10.35 8 12Q8 13.65 9.175 14.825Q10.35 16 12 16Z"
+            />
+          </svg>
+        </div>
+        <button class="toggle-button">
+          <div class="toggle-circle"></div>
+        </button>
+        <div class="moon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              fill="currentColor"
+              d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="page-wrapper">
+        <section class="hero">
+          <div class="hero-wrapper">
+            <div class="hero-main">
+              <h1 class="hero-main-title">Elena Gialamas</h1>
+              <p class="hero-main-descrpition">
+                Game Engineering Student | Artist
+              </p>
+            </div>
+
+            <div class="hero-second">
+              <h1 class="hero-second-title">Portfolio</h1>
+              <p class="hero-second-descrpition">Website</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="section-margin"></div>
+        <section class="desktopscreen">
+          <button
+            class="button-80"
+            role="button"
+            data-popup-target="#popup"
+            type="button"
+          >
+            <img
+              class="button-image"
+              src="/assets/CrystalDefenseCover-94ae7d1e.jpg"
+              alt=""
+            />
+            <div class="button-content">
+              <h3 class="button-title">
+                CRYSTAL DEFENSE - A Tower Defense VR Game
+              </h3>
+              <p>
+                Our team created an immersive VR tower defense game in just
+                three months, leveraging cutting-edge technology.
+              </p>
+            </div>
+          </button>
+          <button
+            class="button-80"
+            role="button"
+            data-popup-target="#popup-AKOD"
+            type="button"
+          >
+            <img class="button-image" src="/assets/DFJW-60adccf9.jpg" alt="" />
+            <div class="button-content">
+              <h3 class="button-title">
+                GAME JAM SUCCESS: Creating "Another Kind of Date"
+              </h3>
+              <p>
+                I participated in a university-organized game jam in France,
+                focused on the theme of "climate change," where international
+                teams worked together to develop a concept for a serious
+                educational game.
+              </p>
+            </div>
+          </button>
+          <button
+            class="button-80"
+            role="button"
+            data-popup-target="#popup-website"
+            type="button"
+          >
+            <img
+              class="button-image"
+              src="/assets/CoverWebsitePopup-6d0a8048.jpg"
+              alt=""
+            />
+            <div class="button-content">
+              <h3 class="button-title">PORTFOLIO WEBSITE</h3>
+              <p>
+                In my first web development project, I created this portfolio
+                website using Three.js for 3D integration and GSAP's
+                scrolltrigger for animations.
+              </p>
+            </div>
+          </button>
+
+          <div class="popup" id="popup">
+            <div class="popup-header">
+              <div class="title">Crystal Defense - A Tower Defense VR Game</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="popup-body">
+              <div class="uniform-container video-media">
+                <video src="/assets/Trailer720P-172314ad.mp4" controls>
+                  The video could not be played. You can also find it
+                  <a href="https://www.youtube.com/watch?v=Mie_D6UjqjM"
+                    >here.</a
+                  >
+                </video>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Introduction</h3>
+                  <p>
+                    Our team of five was faced with the challenge of creating a
+                    VR game within a three-month timeframe. With the requirement
+                    of utilizing cutting-edge VR technology, we set out to
+                    deliver an immersive and visually appealing tower defense
+                    experience.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Project Scope and Approach</h3>
+                  <p>
+                    To optimize our limited time while ensuring scalability, we
+                    decided to develop a tower defense game. With a focus on the
+                    VR medium, we dedicated ourselves to creating a captivating
+                    world with custom-made assets, visual effects, and
+                    hand-painted textures. For development, we employed Unreal
+                    Engine and Visual Studio, alongside Blender and Procreate
+                    for visual components. Our implementation involved a
+                    combination of C++ programming and Unreal's Blueprint visual
+                    scripting language.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>My Responsibilities</h3>
+                  <p>
+                    I took charge of implementing the building system, enabling
+                    players to strategically place offensive and defensive
+                    towers throughout the virtual world. Additionally, I
+                    undertook the creation of enemy models and integrated
+                    animations to enhance their behavior and interactions within
+                    the game. I was also responsible for painting textures and
+                    some of the visual effects.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Enhancing Immersion and Gameplay</h3>
+                  <p>
+                    Our objective was to create an immersive experience that
+                    went beyond the traditional tower defense gameplay of
+                    placing towers and passively observing. To achieve this, we
+                    implemented shooting mechanics, enabling players to actively
+                    engage with the game environment. By incorporating the
+                    player as an additional variable within the game world, we
+                    aimed to enhance strategic decision-making and foster
+                    dynamic gameplay experiences.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Challenges and Solutions</h3>
+                  <p>
+                    Throughout development, we encountered two key challenges.
+                    Firstly, we had to carefully manage performance for the VR
+                    platform. Optimizing polygon count, effects, etc. was
+                    essential to ensure smooth gameplay and a seamless player
+                    experience. Secondly, designing the user interface (UI) for
+                    VR proved complex. We needed a UI that moved naturally with
+                    the player, allowing intuitive selection without cumbersome
+                    menu interactions. While our solutions were sufficient,
+                    further improvements would have greatly enhanced gameplay.
+                    This underscored the importance of proper UI design and made
+                    us rethink our design approach for future projects.
+                  </p>
+                </div>
+              </div>
+              <div class="container">
+                <div class="box">
+                  <img
+                    src="https://www.hs-kempten.de/fileadmin/_processed_/4/8/csm_Bild1_0eab663af9.png"
+                    alt="The image could not be loaded."
+                  />
+                  <span>An in-game environment screenshot.</span>
+                </div>
+                <div class="box">
+                  <img
+                    src="https://www.hs-kempten.de/fileadmin/_processed_/c/1/csm_Bild5_1f7e678939.png"
+                    alt="The image could not be loaded."
+                  />
+                  <span
+                    >This is the 3D model of the basic enemy character I have
+                    created for our game.</span
+                  >
+                </div>
+                <div class="box">
+                  <img
+                    src="https://www.hs-kempten.de/fileadmin/_processed_/7/e/csm_Bild3_309927fe7b.png"
+                    alt="The image could not be loaded."
+                  />
+                  <span>The placeable barricades and ballistas.</span>
+                </div>
+                <div class="box">
+                  <img src="/assets/TreadmillS-881ddab7.jpg" />
+                  <span>A game test on the VR treadmill.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup" id="popup-AKOD">
+            <div class="popup-header">
+              <div class="title">
+                Game Jam Success: Creating "Another Kind of Date"
+              </div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="popup-body">
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Introduction</h3>
+                  <p>
+                    When my university announced a game jam organized by the
+                    Franco-German Youth Office, I applied and secured a spot. I
+                    traveled to Angoulême, France, where the game jam commenced
+                    with the theme: "climate change." Our challenge was to
+                    develop a game concept addressing this issue, catering to
+                    students in Germany and France. The game aimed to be a
+                    serious educational tool, suitable for classroom use. With
+                    limited time, we formed teams comprising German and French
+                    university students, ready to bring our vision to fruition.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Game Concept: "Another Kind of Date"</h3>
+                  <p>
+                    Our project, "Another Kind of Date," materialized as a
+                    politically-driven dating simulator. Picture yourself as a
+                    mediator, navigating the complexities of international
+                    diplomacy by engaging in unconventional "dates" with
+                    fictional world leaders. The goal? Persuade them to support
+                    climate-friendly legislation. We spent two days refining our
+                    concept and seeking feedback through several sales pitches,
+                    guided by a jury comprised of gaming professionals, climate
+                    change experts, education specialists, and competing teams.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Victory and Continued Development</h3>
+                  <p>
+                    We emerged as the winners of the contest, which provided us
+                    with the necessary financial support to work on our project
+                    for an additional six months. Our task shifted towards
+                    creating a comprehensive Game Design Document, encompassing
+                    essential elements such as budget allocation, timeline
+                    planning, key features, captivating gameplay mechanics, and
+                    strategic partnerships. Within the team, my primary
+                    responsibility revolved around overseeing the art direction
+                    and working on game design aspects.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Challenges and Lessons Learned</h3>
+                  <p>
+                    Working with an international team presented its share of
+                    challenges. Throughout those six months, we encountered
+                    difficulties in coordinating schedules due to academic and
+                    work commitments. Text messages became our primary mode of
+                    communication, although it wasn't always smooth sailing.
+                    However, the mistakes we made taught us invaluable lessons
+                    about the significance of effective communication in project
+                    management. Now, I am better prepared for future
+                    international collaborations.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <p>
+                    The article about the event, released by OFAJ can be found
+                    <a
+                      href="https://www.dfjw.org/meldungen/videospiele-fur-das-klima.html"
+                      >here.</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="container">
+                <div class="box">
+                  <img src="/assets/CharacterDesignAKOD-fa80cb5a.png" />
+                  <span
+                    >A Character design sheet illustrating a potential art
+                    direction for the game.</span
+                  >
+                </div>
+                <div class="box">
+                  <img src="/assets/GameplayPreview2AKOD-10d2c4fa.png" />
+                  <span
+                    >Sketch of a potential game mode design and layout.</span
+                  >
+                </div>
+                <div class="box">
+                  <img src="/assets/GameplayPreviewAKOD-36cef6bb.png" />
+                  <span
+                    >Layout prototype for a dating sim-inspired game mode.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup" id="popup-website">
+            <div class="popup-header">
+              <div class="title">Portfolio Website</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="popup-body">
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Introduction</h3>
+                  <p>
+                    Embarking on my very first web development project, I aimed
+                    to create a portfolio website that would not only be a
+                    learning experience but also make use of newer technologies.
+                    Instead of taking the easy route of copying existing
+                    portfolio templates, I wanted to make something unique. With
+                    my love for both 2D and 3D art, I decided to dive into
+                    Three.js to bring 3D models into the mix.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Designing with Stylized 3D</h3>
+                  <p>
+                    My design process kicked off with me getting my hands dirty
+                    in Blender. I created a stylized room as the centerpiece for
+                    the website. This room set the tone for the entire design,
+                    especially when it came to colors. I wanted it to look good,
+                    even as a standalone art piece. So, I had two goals in mind:
+                    to make it visually appealing with a pleasing color scheme,
+                    and to keep the model's poly count low to ensure smooth
+                    performance without sacrificing the artistic flair.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Learning the Basics</h3>
+                  <p>
+                    Being a total newbie in web development, I had to start from
+                    scratch and learn HTML, CSS, and JavaScript. My aim was to
+                    grasp the fundamentals and figure out one of the many
+                    approaches to web development. But the most important thing
+                    was to make it work in the end!
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Utilizing Frameworks and Tools</h3>
+                  <p>
+                    Of course, I couldn't go completely framework-free and
+                    tackle everything on my own, since that would have taken far
+                    too long. So, I decided to embrace the power of Three.js to
+                    handle all the 3D assets, and I enlisted the help of GSAP's
+                    scrolltrigger feature to add camera and room animations.
+                  </p>
+                </div>
+              </div>
+              <div class="uniform-container">
+                <div class="ProjectBodyPara">
+                  <h3>Responsive Design Challenges</h3>
+                  <p>
+                    After weeks of working on the website on the side, I thought
+                    everything was going smoothly. But when I resized the window
+                    to a mobile format, I discovered that the website layout
+                    faltered when viewed on different devices. It took some
+                    tweaking and troubleshooting, especially with the 3D aspects
+                    of the website, to make the website look decent on both
+                    desktop and mobile devices.
+                  </p>
+                </div>
+              </div>
+              <div class="container">
+                <div class="box">
+                  <img src="/assets/WebDevScreenshot-65b7eae8.jpg" />
+                  <span>A typical day debugging ...</span>
+                </div>
+                <div class="box">
+                  <img src="/assets/BlenderScreenshot-69a250a7.jpg" />
+                  <span>A look into my 3D modelling workflow.</span>
+                </div>
+                <div class="box">
+                  <img src="/assets/VSCodeWebsiteScreenshot-66e45c51.jpg" />
+                  <span
+                    >A brief look into the chaos that is my HTML and CSS
+                    code.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="overlay" id="overlay"></div>
+        </section>
+      </div>
+    </div>
+    
+  </body>
+</html>
