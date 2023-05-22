@@ -474,12 +474,11 @@ img {
 }
 
 .box > span {
-  font-size: var(--fs-sh);
-  /* 3.8vh; */
+  font-size: var(--fs-xl);
   display: block;
   text-align: center;
-  height: 10vh;
-  line-height: 2.6;
+  max-height: 10vh;
+  line-height: 2;
 }
 
 .box:hover { flex: 1 1 50%; }

@@ -1,4 +1,6 @@
-export default {
+import { defineConfig } from "vite";
+
+export default defineConfig({
   build: {
     rollupOptions: {
       external: ["GSAP/ScrollTrigger.js"],
@@ -15,4 +17,4 @@ export default {
       },
     },
   },
-};
+});
