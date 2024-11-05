@@ -236,23 +236,31 @@ p, h3{
   width: 100%;
 }
 
-.desktopscreen{
+.desktopscreen {
   min-height: 100vh;
   min-height: 100svh;
   margin: 0;
   background-color: var(--color-background);
-  /* background-color: gradient(--color-background, --color-accent3); */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center; /* Center the button container */
   align-items: center;
-  flex-wrap: wrap;
-  gap: 3em;
   padding: 4em;
   box-sizing: border-box;
 }
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  column-gap: 3em;
+  row-gap: 4em; 
+  max-width: 55em;
+  width: 100%; /* Make sure the grid is responsive */
+}
+
 /* Buttons --------------------------------- */
 
 .button-80 {
+  flex: 1 1 calc(50% - 1.5em); /* Each button takes about 50% width minus gap */
   min-width: 15em;
   max-width: 24em;
   min-height: 30em;
@@ -348,6 +356,7 @@ p, h3{
 }
 
 .popup {
+  display: none; /* Hide all popups by default */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -357,7 +366,6 @@ p, h3{
   border-radius: 10px;
   z-index: 10;
   background-color: var(--color-background);
-  /* width: 500px; */
   min-width: 80%;
   max-width: 90%;
   max-height: 90%;
@@ -365,6 +373,7 @@ p, h3{
 }
 
 .popup.active {
+  display: block; /* Only show when active */
   transform: translate(-50%, -50%) scale(1);
   overflow-x: hidden;
 }
